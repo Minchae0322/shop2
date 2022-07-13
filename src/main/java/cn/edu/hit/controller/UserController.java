@@ -66,7 +66,7 @@ public class UserController {
 
         // 去登陆  重定向
 
-        return "redirect:http://localhost:7070/shop/user/tologin";
+        return "redirect:http://localhost:8080/shop/user/tologin";
     }
 
     @RequestMapping("/tologin")
@@ -130,7 +130,7 @@ public class UserController {
 
             // 登陆成功  进入首页   // md5(md5())
 
-            return "redirect:http://localhost:7070/shop/index/toindex";
+            return "redirect:http://localhost:8080/shop/index/toindex";
 
         }
 
