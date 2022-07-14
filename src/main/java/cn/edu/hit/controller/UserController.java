@@ -66,7 +66,7 @@ public class UserController {
 
         // 去登陆  重定向
 
-        return "redirect:http://localhost:8080/shop/user/tologin";
+        return "redirect:http://localhost:7070/shop/user/tologin";
     }
 
     @RequestMapping("/tologin")

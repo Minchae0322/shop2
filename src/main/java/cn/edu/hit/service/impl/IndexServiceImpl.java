@@ -1,4 +1,4 @@
-package cn.edu.hit.service;
+package cn.edu.hit.service.impl;
 
 import cn.edu.hit.dao.IndexDao;
 import cn.edu.hit.po.CategoryExt;
@@ -12,6 +12,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Service
 public class IndexServiceImpl implements IndexService {
     @Autowired
     IndexDao indexDao;

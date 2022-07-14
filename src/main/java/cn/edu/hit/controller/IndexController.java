@@ -26,11 +26,11 @@ public class IndexController {
     public String toindex(Model model){
         // 1级  + 2级  在域对象中
 
-        List<CategoryExt> category= (List<CategoryExt>) servletContext.getAttribute("category");
+        //List<CategoryExt> category= (List<CategoryExt>) servletContext.getAttribute("category");
 
-//        List<CategoryExt> category = indexService.getCategory();
+     List<CategoryExt> category = indexService.getCategory();
 //        // 发给前台
-//        model.addAttribute("category",category);
+      model.addAttribute("category",category);
 
         // 根据二级分类id --> 产品详情
 

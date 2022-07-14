@@ -15,7 +15,7 @@ import java.io.IOException;
 public class CodeController {
 
     @RequestMapping("/Code")
-    public void getCode(HttpServletResponse response , HttpSession httpSession){
+    public  void getCode(HttpServletResponse response , HttpSession httpSession){
         try {
             // 1. 生成图片          1,宽  2, 高   3,字母的个数  4, 干扰线
             ValidateCode validateCode = new ValidateCode(165,66,4,100);
@@ -34,7 +34,11 @@ public class CodeController {
     @ResponseBody
     public String checkValidate(String code , HttpSession httpSession){
         String code1 = (String) httpSession.getAttribute("code");
-        return "ok";
+        if(code1.equalsIgnoreCase(code)){
+            return "ok";
+        }else{
+            return "no";
+        }
     }
 }
 

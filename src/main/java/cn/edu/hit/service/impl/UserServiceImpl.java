@@ -1,13 +1,12 @@
-package cn.edu.hit.service;
+package cn.edu.hit.service.impl;
 
 import cn.edu.hit.dao.UserDao;
 import cn.edu.hit.po.User;
+import cn.edu.hit.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 @Service
-@Repository
 public class UserServiceImpl implements UserService {
 
 
@@ -21,6 +20,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public int changeName(String name) {
+
         return userDao.changeName(name);
     }
 
